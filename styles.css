@@ -1,0 +1,143 @@
+@font-face {
+    font-family: goldleaf;
+    font-family: raleway;
+    src: url(fonts/goldleaf-bold-personal-use.bold.ttf);
+    src: url(fonts/raleway.bold.ttf)
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.box {
+    flex: 1;
+    text-align: center;
+}
+
+.nav {
+    display: flex;
+    /*flex-grow: 1;*/
+    /*flex: 0.5;*/
+    flex-basis: 50px;
+    background: linear-gradient(to right, goldenrod, yellow, purple, green, darkgreen);
+}
+
+/* navigation formatting*/
+nav a {
+    /* padding shows over the navigation buttons */
+    padding: 3px;
+    display: inline-block;
+    text-decoration: none;
+    font-family: goldleaf;
+    font-size: 1.5rem;
+}
+
+/* formatting for visited/unvisited linka*/
+a:link,
+a:visited {
+    color: black;
+}
+
+/* formatting for hovering cursor over a link*/
+a:hover {
+    background-color: white;
+}
+
+html {
+    font-size: 2em;
+    font-family: arial;
+}
+
+h1 {
+    text-shadow: 2px 2px gold, 5px 5px green;
+}
+
+p {
+    color: white;
+    font-size: 0.8em;
+    font-family: raleway;
+    text-shadow: 2px 2px black;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    /*100 view height (vh)*/
+    height: 100vh;
+    background: linear-gradient(to right, rgb(99, 59, 153), rgb(145, 145, 243), rgb(99, 59, 153));
+}
+
+.main {
+    /*flex-grow: 1;*/
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    justify-content: center;
+}
+
+.column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+  }
+  
+img:hover {
+    box-shadow: 0 0 2px 1px gold;
+  }
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgb(99, 59, 153);
+    color: white;
+    text-align: center;
+}
+
+footer p {
+    font-size: medium;
+}
+
+@media (max-width: 850px) {
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+    
+    body{
+        background: linear-gradient(to right, darkgreen, green, rgb(150, 227, 150));
+    }
+}
+
+@media (max-width: 550px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+    
+    body{
+        background: linear-gradient(to right, darkgoldenrod, goldenrod, gold);
+    }
+}
